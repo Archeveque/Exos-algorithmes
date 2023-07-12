@@ -19,26 +19,22 @@ const exo1 = (list) => {
 }
 
 const exo2 = (list) => {
-    nb_west=0
-    sorted_list = list.sort(function (a,b) { return a-b; });
-    highest_value = sorted_list[sorted_list.length-1]
-    if (highest_value % 2 === 0){
-        console.log("pair")
-        sorted_list.forEach(n =>{
-            if (n % 2=== 0){
-                nb_west = nb_west + 1
-            }
-        })
-    }
-    else{
-        console.log("impair")
-        sorted_list.forEach(n =>{
-            if (!(n % 2=== 0)){
-                nb_west = nb_west + 1
-            }
-    })
-}
-    console.log(nb_west)
+nb_step = 0
+nb_west=0
+    for (let i=0; i < (list.length);i++){
+        highest_k = 0;
+        for (let k = i+1 ;k < list.length;k++){
+            nb_step++;
+            if (highest_k < list[k]){
+                highest_k = list[k];
+            } 
+        };
+        console.log(list[i]+">"+highest_k)
+        if (list[i]> highest_k){
+            nb_west++;
+        }   
+    };
+    console.log(nb_west + " // "+nb_step+" comparaisons")
 }
 
 const exo3 = (list) => {
@@ -59,21 +55,7 @@ const exo3 = (list) => {
 }
 
 const exo4 = (list) => {
-    nb_west=0
-    sorted_list = list.sort(function (a,b) { return a-b; });
-    highest_value = sorted_list[sorted_list.length-1]
-    if (highest_value % 2 === 0){
-        console.log("pair")
-        sorted_list.forEach(n =>{
-            if (n % 2=== 0){
-                nb_west++
-            }
-        })
-    }
-    else{
-        console.log("impair")
-    }
-    console.log(nb_west)
+    console.log("pas le temps :(")
 }
 
 
