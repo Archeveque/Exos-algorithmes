@@ -55,29 +55,23 @@
         function displayContents(txt) {
             var el = document.getElementById('main'); 
             el.innerHTML = txt; //display output in DOM
-                // Declare a variable and store an
-    // integer value
-      
-      // Here we typecasting the num
-      // Splitting the num, so that
-      // we got an array of strings
-      // Then use map function to
-      // convert the array of strings
-      // into array of numbers
-        
-      var list = String(txt).split(" ").map((txt)=>{
-        return Number(txt)
-      })
-        
-      console.log(list)
-      var btn = document.getElementById('button_area'); 
-      
-        btntext = "<button onclick='BeginMergeSort(["+list+"])'>mergeSort</button><button onclick='exo1(["+list+"])'>exo1</button><button onclick='exo2(["+list+"])'>exo2</button><button onclick='exo3(["+list+"])'>exo3</button><button onclick='exo4(["+list+"])'>exo4</button>"
-        btn.innerHTML = btntext; //display output in DOM
+            // Declare a variable and store an
+            // integer value
+            // Here we typecasting the num
+            // Splitting the num, so that
+            // we got an array of strings
+            // Then use map function to
+            // convert the array of strings
+            // into array of numbers    
+            var list = String(txt).split(" ").map((txt)=>{
+                return Number(txt)
+            })
+            console.log(list)
+            var btn = document.getElementById('button_area'); 
+            btntext = "<button onclick='BeginMergeSort(["+list+"])'>mergeSort</button><button onclick='exo1(["+list+"])'>exo1</button><button onclick='exo2(["+list+"])'>exo2</button><button onclick='exo3(["+list+"])'>exo3</button><button onclick='exo4(["+list+"])'>exo4</button>"
+            btn.innerHTML = btntext; //display output in DOM
         }   
     </script>
-
-
 
     <body onload="checkFileAPI();">
         <div id="container">    
@@ -92,8 +86,5 @@
         </div>
         <script src="script.js">console.log(list)</script>
         <script src="mergesort.js"></script>
-    
-    
     </body>
-
 </html>

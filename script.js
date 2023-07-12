@@ -17,6 +17,7 @@ const exo1 = (list) => {
     })
     console.log(is_wanted_number + " // "+nb_step+" comparaisons")
 }
+
 const exo2 = (list) => {
     nb_west=0
     sorted_list = list.sort(function (a,b) { return a-b; });
